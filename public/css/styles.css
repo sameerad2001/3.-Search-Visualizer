@@ -13,7 +13,15 @@ p {
 
 ::selection {
     color: #D83A56;
-    background-color: #AEE1E1;
+    background-color: #AEE1E15f;
+}
+
+.array {
+    color: #364F6B;
+    font-family: 'Bungee Shade', cursive;
+    font-size: 2.5rem;
+    height: 5rem;
+    margin: 4rem;
 }
 
 .big_head {
@@ -21,6 +29,27 @@ p {
     color: #3FC1C9;
     font-size: 5rem;
     margin: 1rem;
+}
+
+@keyframes flicker {
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+        text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #f09, 0 0 80px #f09, 0 0 90px #f09, 0 0 100px #f09, 0 0 150px #f09;
+    }
+    20%,
+    24%,
+    55% {
+        text-shadow: none;
+    }
+}
+
+.btn-dark {
+    animation: flicker 0.11s ease-in-out infinite alternate;
 }
 
 .btn-dark:hover {

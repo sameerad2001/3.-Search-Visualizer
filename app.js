@@ -48,7 +48,12 @@ app.post('/', (req, res) => {
     }
 
     console.log(array_number + ' ' + key)
-    res.redirect('/')
+    res.redirect('/visualizer')
+})
+
+
+app.get('/visualizer', (req, res) => {
+    res.render('visualizer', { array_number: array_number })
 })
 
 app.listen(3000, () => {
