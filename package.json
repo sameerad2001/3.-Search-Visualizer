@@ -1,0 +1,16 @@
+{
+  "name": "search_visualizer",
+  "version": "1.0.0",
+  "description": "A Visual representation of widely used search algos",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sameer Ahmed <sameerad2001@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}

@@ -1,0 +1,59 @@
+body {
+    /* background-color: #F0E2D0; */
+    text-align: center;
+    background-attachment: fixed;
+    background-image: linear-gradient(to top right, #F0E2D0, #F4EEFF);
+}
+
+p {
+    font-family: 'Bungee Shade', cursive;
+    color: #364F6B;
+    font-size: 2.5rem;
+}
+
+::selection {
+    color: #D83A56;
+    background-color: #AEE1E1;
+}
+
+.big_head {
+    font-family: 'Bungee Shade', cursive;
+    color: #3FC1C9;
+    font-size: 5rem;
+    margin: 1rem;
+}
+
+.btn-dark:hover {
+    background-color: #D83A56;
+    border-color: #D83A56;
+}
+
+.form-control {
+    font-size: 1.2rem;
+}
+
+.form_page {
+    margin: 10% auto;
+}
+
+.important_text {
+    color: #D83A56;
+}
+
+.input_sequence {
+    margin: 1rem 4rem;
+}
+
+#footer_text {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 1.2rem;
+    color: #71C9CE;
+    margin: 1rem;
+}
+
+#footer_text a {
+    color: #AA96DA;
+}
