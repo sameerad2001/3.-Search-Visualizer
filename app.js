@@ -13,6 +13,7 @@ app.set('view engine', 'ejs')
 // Global Variables
 let key;
 let array_number = [];
+let algo;
 
 function reset_array() {
     for (let i = 0; i < array_number.length; i++) {
@@ -41,6 +42,8 @@ app.post('/', (req, res) => {
     // "1" -------> ['','1'] -------> 1
     key = parseInt(JSON.stringify(req.body.key).split("\"")[1]);
 
+    algo = parseInt(JSON.stringify(req.body.algorithm).split("\"")[1]);
+    console.log(algo)
 
     reset_array()
     for (let i = 0; i < array_string.length; i++) {
@@ -53,7 +56,23 @@ app.post('/', (req, res) => {
 
 
 app.get('/visualizer', (req, res) => {
-    res.render('visualizer', { array_number: array_number })
+
+    algo_name = ""
+    switch (algo) {
+        case 1:
+            algo_name = "Linear Search";
+            break;
+
+        case 2:
+            array_number.sort((a, b) => a - b)
+            algo_name = "Binary Search";
+            break;
+
+        default:
+            algo_name = "Linear Search"
+    }
+
+    res.render('visualizer', { array_number: array_number, key: key, algo_name: algo_name, algo: algo })
 })
 
 app.listen(3000, () => {

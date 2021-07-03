@@ -9,7 +9,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Libre+Franklin:wght@100&family=Montserrat&display=swap" rel="stylesheet">
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -29,12 +29,18 @@
 
             <div class="col-lg-6 col-md-12">
                 <form action="/" class="input_sequence" method="POST">
-                    <p> Elements : </p>
+                    <p class="stick_out"> Elements : </p>
                     <input type="text" class="form-control" name='array' placeholder="Eg: 1,2,3,4,5">
                     <br/>
-                    <p>Key :</p>
+                    <p class="stick_out">Key :</p>
                     <input type="number" class="form-control" name="key" placeholder="Eg: 5">
                     <br/>
+                    <p class="stick_out"> Algo : </p>
+                    <select class="form-control" name="algorithm" id="algorithm">
+                        <option value="1">Linear Search</option>
+                        <option value="2">Binary Search</option>
+                    </select> <br/>
+
                     <button class="btn-lg btn-dark" type="submit">submit</button>
                 </form>
             </div>

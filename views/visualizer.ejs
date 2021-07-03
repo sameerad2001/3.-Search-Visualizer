@@ -10,8 +10,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Libre+Franklin:wght@100&family=Montserrat&display=swap" rel="stylesheet">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
@@ -23,11 +22,35 @@
 
     <h1 class="big_head">Search Visualizer</h1>
 
+    <div class="row search_info">
+        <div class="col">
+            <p class="dont_stick_out"> Key : &nbsp;
+                <span class="stick_out_ish" id="key"><%= key %></span>
+            </p>
+        </div>
+        <div class="col">
+            <p class="dont_stick_out">
+                Steps : &nbsp;
+                <span class="stick_out_ish" id="step_count">0</span>
+            </p>
+        </div>
+
+        <div class="col">
+            <p class="dont_stick_out">
+                Algo : &nbsp;
+                <span class="stick_out_ish" id="algo"> <%= algo  %>  </span>
+                <span class="stick_out_ish">.<%= algo_name %></span>
+            </p>
+        </div>
+    </div>
+
+
+    <p class="dont_stick_out">Elements :</p>
     <div class="row array">
 
         <%for (let i = 0 ; i < array_number.length ; i++){%>
 
-            <div class="col">
+            <div class="col array_element">
                 <%= array_number[i] %>
             </div>
 

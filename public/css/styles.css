@@ -5,12 +5,6 @@ body {
     background-image: linear-gradient(to top right, #F0E2D0, #F4EEFF);
 }
 
-p {
-    font-family: 'Bungee Shade', cursive;
-    color: #364F6B;
-    font-size: 2.5rem;
-}
-
 ::selection {
     color: #D83A56;
     background-color: #AEE1E15f;
@@ -18,10 +12,12 @@ p {
 
 .array {
     color: #364F6B;
-    font-family: 'Bungee Shade', cursive;
+    /* font-family: 'Bungee Shade', cursive; */
+    font-family: 'Montserrat', sans-serif;
     font-size: 2.5rem;
     height: 5rem;
     margin: 4rem;
+    margin-top: 3rem;
 }
 
 .big_head {
@@ -57,12 +53,36 @@ p {
     border-color: #D83A56;
 }
 
+.dont_stick_out {
+    font-family: 'Libre Franklin', sans-serif;
+    color: #364F6B;
+    font-size: 2rem;
+}
+
+.discard {
+    color: #364F6B9f;
+}
+
+.flash {
+    /* background-image: linear-gradient(to top right, #D83A5600, #FF616D4f); */
+    /* background-image: linear-gradient(to top right, #F25D9C0f, #FF616D4f); */
+    background-image: linear-gradient(to top right, #00000000, #3FC1C94f);
+    color: #071A52;
+    /* border-radius: 5%; */
+    border-radius: 50%;
+}
+
 .form-control {
     font-size: 1.2rem;
 }
 
 .form_page {
     margin: 10% auto;
+    margin-top: 9%;
+}
+
+.found {
+    color: #D83A56;
 }
 
 .important_text {
@@ -70,7 +90,25 @@ p {
 }
 
 .input_sequence {
-    margin: 1rem 4rem;
+    margin: 0rem 4rem;
+}
+
+.search_info {
+    /* margin: 3rem 5rem 2rem; */
+    margin: 5% 7% 1% 7%;
+}
+
+.stick_out {
+    font-family: 'Bungee Shade', cursive;
+    color: #364F6B;
+    font-size: 2.5rem;
+}
+
+.stick_out_ish {
+    font-family: 'Montserrat', sans-serif;
+    /* color: #3FC1C9; */
+    font-size: 2.5rem;
+    color: #086972;
 }
 
 #footer_text {
