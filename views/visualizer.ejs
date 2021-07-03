@@ -22,27 +22,39 @@
 
     <h1 class="big_head">Search Visualizer</h1>
 
-    <div class="row search_info">
-        <div class="col">
-            <p class="dont_stick_out"> Key : &nbsp;
-                <span class="stick_out_ish" id="key"><%= key %></span>
-            </p>
-        </div>
-        <div class="col">
-            <p class="dont_stick_out">
-                Steps : &nbsp;
-                <span class="stick_out_ish" id="step_count">0</span>
-            </p>
+    <div class="search_info">
+        <div class="row ">
+            <div class="col">
+                <p class="dont_stick_out">
+                    Algo : &nbsp;
+                    <span class="stick_out_ish" id="algo"> <%= algo  %>  </span>
+                    <span class="stick_out_ish">.<%= algo_name %></span>
+                </p>
+            </div>
+            <div class="col">
+                <p class="dont_stick_out"> Key : &nbsp;
+                    <span class="stick_out_ish" id="key"><%= key %></span>
+                </p>
+            </div>
         </div>
 
-        <div class="col">
-            <p class="dont_stick_out">
-                Algo : &nbsp;
-                <span class="stick_out_ish" id="algo"> <%= algo  %>  </span>
-                <span class="stick_out_ish">.<%= algo_name %></span>
-            </p>
+        <div class="row ">
+            <div class="col">
+                <p class="dont_stick_out">
+                    Steps : &nbsp;
+                    <span class="stick_out_ish" id="step_count">0</span>
+                </p>
+            </div>
+            <div class="col">
+                <p class="dont_stick_out">
+                    Index : &nbsp;
+                    <span class="stick_out_ish" id="algo">0</span>
+                </p>
+            </div>
         </div>
     </div>
+
+
 
 
     <p class="dont_stick_out">Elements :</p>

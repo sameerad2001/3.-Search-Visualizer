@@ -5,27 +5,7 @@ footer_text.innerHTML += new Date().getFullYear()
 let array_numbers = document.getElementsByClassName("array_element");
 let step_count = document.getElementById("step_count")
 let key = document.getElementById("key")
-
-// linear_search = async() => {
-//     let count = 0
-//     for (let i = 0; i < array_numbers.length; i++) {
-//         count++;
-//         step_count.innerHTML = count;
-
-//         if (parseInt(array_numbers[i].innerHTML) === parseInt(key.innerHTML)) {
-//             array_numbers[i].classList.add("found")
-//             break;
-//         }
-
-//         array_numbers[i].classList.add("flash");
-
-//         await new Promise(resolve => setTimeout(resolve, 500))
-
-//         array_numbers[i].classList.remove("flash");
-//         array_numbers[i].classList.add("discard");
-//     }
-// }
-
+let delay = 500 // 0.5 sec
 
 async function linear_search() {
     let count = 0
@@ -40,7 +20,7 @@ async function linear_search() {
 
         array_numbers[i].classList.add("flash");
 
-        await new Promise(resolve => setTimeout(resolve, 500))
+        await new Promise(resolve => setTimeout(resolve, delay))
 
         array_numbers[i].classList.remove("flash");
         array_numbers[i].classList.add("discard");
@@ -63,16 +43,29 @@ async function binary_search() {
             array_numbers[mid].classList.add("found")
             break;
         } else if (array_numbers[mid].innerHTML > parseInt(key.innerHTML)) {
+
+            // Discard the other elements in range [mid, last]
+            for (let j = mid; j < array_numbers.length; j++) {
+                array_numbers[j].classList.add("discard");
+            }
+
             end = mid - 1;
         } else {
+
+            // Discard the other elements in range [first, mid]
+            for (let j = 0; j <= mid; j++) {
+                array_numbers[j].classList.add("discard");
+            }
+
             start = mid + 1;
         }
 
         array_numbers[mid].classList.add("flash");
 
-        await new Promise(resolve => setTimeout(resolve, 700))
+        await new Promise(resolve => setTimeout(resolve, delay))
         array_numbers[mid].classList.remove("flash");
-        array_numbers[mid].classList.add("discard");
+        // Already discarded above
+        // array_numbers[mid].classList.add("discard");
     }
 }
 
