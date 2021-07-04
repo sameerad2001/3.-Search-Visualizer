@@ -23,6 +23,16 @@
     <h1 class="big_head">Search Visualizer</h1>
 
     <div class="search_info">
+
+        <div class="row hidden_info">
+            <div class="col">
+                <p class="dont_stick_out">
+                    Delay : &nbsp;
+                    <span class="stick_out_ish" id="delay"> <%= delay  %>  </span>
+                </p>
+            </div>
+        </div>
+
         <div class="row ">
             <div class="col">
                 <p class="dont_stick_out">
@@ -46,12 +56,19 @@
                 </p>
             </div>
             <div class="col">
-                <p class="dont_stick_out">
+                <p class="dont_stick_out important_text">
                     Index : &nbsp;
-                    <span class="stick_out_ish" id="algo">0</span>
+                    <span class="stick_out_ish important_text" id="index">0</span>
                 </p>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col">
+                <button class="btn-lg btn-dark" id="start_search">START (✧ω✧)</button>
+            </div>
+        </div>
+
     </div>
 
 

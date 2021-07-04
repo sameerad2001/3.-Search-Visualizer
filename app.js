@@ -1,5 +1,6 @@
 const express = require('express')
-const body_parser = require('body-parser')
+const body_parser = require('body-parser');
+const { json } = require('body-parser');
 
 let app = express()
 
@@ -14,11 +15,11 @@ app.set('view engine', 'ejs')
 let key;
 let array_number = [];
 let algo;
+let delay;
 
 function reset_array() {
-    for (let i = 0; i < array_number.length; i++) {
-        array_number.pop();
-    }
+    // Empty the global array
+    array_number = []
 }
 
 
@@ -43,14 +44,16 @@ app.post('/', (req, res) => {
     key = parseInt(JSON.stringify(req.body.key).split("\"")[1]);
 
     algo = parseInt(JSON.stringify(req.body.algorithm).split("\"")[1]);
-    console.log(algo)
+    console.log("Option: " + algo)
+
+    delay = parseInt(JSON.stringify(req.body.delay).split("\"")[1]);
 
     reset_array()
     for (let i = 0; i < array_string.length; i++) {
         array_number[i] = array_string[i]
     }
 
-    console.log(array_number + ' ' + key)
+    console.log("Array: " + array_number + "\nKey: " + key)
     res.redirect('/visualizer')
 })
 
@@ -68,11 +71,32 @@ app.get('/visualizer', (req, res) => {
             algo_name = "Binary Search";
             break;
 
+        case 3:
+            array_number.sort((a, b) => a - b)
+            algo_name = "Jump Search";
+            break;
+
+        case 4:
+            array_number.sort((a, b) => a - b)
+            algo_name = "Exponential Search";
+            break;
+
+        case 5:
+            array_number.sort((a, b) => a - b)
+            algo_name = "Fibonacci Search";
+            break;
+
+        case 6:
+            array_number.sort((a, b) => a - b)
+            algo_name = "Interpolation Search";
+            break;
+
+
         default:
             algo_name = "Linear Search"
     }
 
-    res.render('visualizer', { array_number: array_number, key: key, algo_name: algo_name, algo: algo })
+    res.render('visualizer', { array_number: array_number, key: key, algo_name: algo_name, algo: algo, delay: delay })
 })
 
 app.listen(3000, () => {

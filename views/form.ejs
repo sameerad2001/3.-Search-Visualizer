@@ -32,13 +32,28 @@
                     <p class="stick_out"> Elements : </p>
                     <input type="text" class="form-control" name='array' placeholder="Eg: 1,2,3,4,5">
                     <br/>
-                    <p class="stick_out">Key :</p>
-                    <input type="number" class="form-control" name="key" placeholder="Eg: 5">
-                    <br/>
+
+                    <div class="row">
+                        <div class="col">
+                            <p class="stick_out">Key :</p>
+                            <input type="number" class="form-control" name="key" placeholder="Eg: 5">
+                            <br/>
+                        </div>
+                        <div class="col">
+                            <p class="stick_out">Delay:</p>
+                            <input type="number" class="form-control" name="delay" placeholder="Eg: 500 (ms)">
+                            <br/>
+                        </div>
+                    </div>
+
                     <p class="stick_out"> Algo : </p>
                     <select class="form-control" name="algorithm" id="algorithm">
-                        <option value="1">Linear Search</option>
-                        <option value="2">Binary Search</option>
+                        <option value="1">Linear </option>
+                        <option value="2">Binary </option>
+                        <option value="3">Jump </option>
+                        <option value="4">Exponential </option>
+                        <option value="5">Fibonacci </option>
+                        <option value="6">Interpolation </option>
                     </select> <br/>
 
                     <button class="btn-lg btn-dark" type="submit">submit</button>
