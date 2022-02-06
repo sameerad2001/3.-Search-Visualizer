@@ -99,6 +99,6 @@ app.get('/visualizer', (req, res) => {
     res.render('visualizer', { array_number: array_number, key: key, algo_name: algo_name, algo: algo, delay: delay })
 })
 
-app.listen(3000, () => {
-    console.log('server started on port 3000')
+app.listen(4000, () => {
+    console.log('server started on port 4000')
 })

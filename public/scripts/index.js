@@ -210,6 +210,7 @@ function reset_visuals() {
     for (let i = 0; i < array_numbers.length; i++) {
         array_numbers[i].classList.remove("discard");
         array_numbers[i].classList.remove("found");
+        array_numbers[i].classList.remove("range");
     }
 }
 
