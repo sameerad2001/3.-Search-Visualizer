@@ -11,9 +11,9 @@ This application aims to show the step by step approach the various searching al
 2. Enter the key that needs to be searched 
 3. Enter the time delay i.e the time gap between each step of the selected algorithm
 4. Select a algorithm
-    - ![]("https://github.com/sameerad2001/3.-Search-Visualizer/blob/master/public/img/Demo1.jpg")
+    - <img src = "https://github.com/sameerad2001/3.-Search-Visualizer/blob/master/public/img/Demo1.jpg" alt="Website Demo" />
 5. The application will open a new page with the entered sequence, press start ....
-    - ![]("https://github.com/sameerad2001/3.-Search-Visualizer/blob/master/public/img/Demo2.jpg")
+    - <img src = "https://github.com/sameerad2001/3.-Search-Visualizer/blob/master/public/img/Demo2.jpg" alt="Website Demo" />
 
 ## What works and what doesn't
 
